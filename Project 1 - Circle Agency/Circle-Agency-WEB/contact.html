@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Agency - Contact</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
+</head>
+
+<body>
+
+    <header> 
+
+        <nav>
+
+            <div class="logo">
+                <a href="index.html"><img src="images/logos/circle.svg" alt="Circle Agency Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html?id=1">Projects</a></li>
+                <li><a href="index.html#services">Services</a></li>
+            </ul>
+            <a href="contact.html" class="btn-contact">Contact Us</a>
+
+        </nav>
+
+    </header>
+
+    <form action="" id="contact-form">
+
+        <h1>Contact Us</h1>
+
+        <div class="contact-name">
+
+            <label for="name">Full Name</label>
+            <input type="text" placeholder="Enter your full name" name="name" id="name">
+            <p id="errorContactName" hidden class="errorForm">Please enter your full name</p>
+        
+        </div>
+
+        <div id="contact-email-phone-row">
+
+            <div class="contact-email">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your email address" name="email" id="email">
+                <p id="errorContactEmail" hidden class="errorForm">Please enter a valid email address</p>
+            </div>
+
+            <div class="contact-phone">
+                <label for="phone">Phone</label>
+                <input type="phone" placeholder="Enter your phone number" name="phone" id="phone">
+                <p id="errorContactPhone" hidden class="errorForm">Please enter a valid phone number</p>
+            </div>
+
+        </div>
+
+        <div class="contact-message">
+
+            <label for="message">Message</label>
+            <textarea placeholder="Enter your message" name="message" id="message"></textarea>
+            <p id="errorContactMessage" hidden class="errorForm">Please enter a message</p>
+        
+        </div>
+
+        <div class="contact-button">
+
+            <button type="button" onclick="sendForm()" id="submitBtn">Submit</button>
+            <p id="successContact" hidden class="successForm">Your message has been sent successfully!</p>
+        
+        </div>
+
+        <div class="contact-modal">
+
+            <div class="modal-content">
+                <span class="close-button">X</span>
+                <img src="/images/logos/circle.svg" alt="logo circle" class="modal-logo">
+                <h2>Form Submitted</h2>
+                <p>Thank you! Your form has been sent.</p>
+            </div>
+
+        </div>
+
+    </form>
+
+    <footer class="footer">
+
+        <div class="address-info">
+            <a href="">
+                <img src="images/logos/circle.svg" alt="Circle Logo">
+            </a>
+            <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+        </div>
+
+        <ul class="sitemap">
+            <li><a href="#">Team</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="projects.html?id=1">Projects</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
