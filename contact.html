@@ -37,7 +37,7 @@
 
     </header>
 
-    <form action="" id="contact-form">
+    <form action="" id="contact-form" onsubmit="sendForm(event)">
 
         <h1>Contact Us</h1>
 
@@ -70,12 +70,12 @@
             <label for="message">Message</label>
             <textarea placeholder="Enter your message" name="message" id="message"></textarea>
             <p id="errorContactMessage" hidden class="errorForm">Please enter a message</p>
-        
+           
         </div>
 
         <div class="contact-button">
 
-            <button type="button" onclick="sendForm()" id="submitBtn">Submit</button>
+            <button type="submit" id="submitBtn">Submit</button>
             <p id="successContact" hidden class="successForm">Your message has been sent successfully!</p>
         
         </div>
@@ -112,6 +112,9 @@
         </ul>
 
     </footer>
+
+     /* enlace al script de contact*/
+    <script src="Scripts/contact.js"></script>
 
 </body>
 
