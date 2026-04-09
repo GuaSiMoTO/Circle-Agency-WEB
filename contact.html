@@ -22,76 +22,104 @@
     <header> 
 
         <nav>
-
+            
             <div class="logo">
                 <a href="index.html"><img src="images/logos/circle.svg" alt="Circle Agency Logo"></a>
             </div>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html?id=1">Projects</a></li>
                 <li><a href="index.html#services">Services</a></li>
             </ul>
+
             <a href="contact.html" class="btn-contact">Contact Us</a>
+
+            <!-- botón de menú hamburguesa escondido -->
+            <!-- Lo crearemos con CSS y JavaScript para que solo aparezca en pantallas pequeñas -->
+             <div class="nav-menu-icon" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+             </div>
+           
 
         </nav>
 
     </header>
 
-    <form action="" id="contact-form" onsubmit="sendForm(event)">
+    <head>
+        <!-- Menu desplegable para móviles, inicialmente oculto, se mostrará al hacer clic en el ícono de menú hamburguesa -->
+        <div class="mobile-menu" id="mobile-menu">
 
-        <h1>Contact Us</h1>
+            <span class="close-menu" id="close-menu">X</span>
 
-        <div class="contact-name">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html?id=1">Projects</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
 
-            <label for="name">Full Name</label>
-            <input type="text" placeholder="Enter your full name" name="name" id="name">
-            <p id="errorContactName" hidden class="errorForm">Please enter your full name</p>
-        
         </div>
 
-        <div id="contact-email-phone-row">
 
-            <div class="contact-email">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Enter your email address" name="email" id="email">
-                <p id="errorContactEmail" hidden class="errorForm">Please enter a valid email address</p>
+        <form action="" id="contact-form" onsubmit="sendForm(event)">
+
+            <h1>Contact Us</h1>
+
+            <div class="contact-name">
+
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="Enter your full name" name="name" id="name">
+                <p id="errorContactName" hidden class="errorForm">Please enter your full name</p>
+            
             </div>
 
-            <div class="contact-phone">
-                <label for="phone">Phone</label>
-                <input type="phone" placeholder="Enter your phone number" name="phone" id="phone">
-                <p id="errorContactPhone" hidden class="errorForm">Please enter a valid phone number</p>
+            <div id="contact-email-phone-row">
+
+                <div class="contact-email">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your email address" name="email" id="email">
+                    <p id="errorContactEmail" hidden class="errorForm">Please enter a valid email address</p>
+                </div>
+
+                <div class="contact-phone">
+                    <label for="phone">Phone</label>
+                    <input type="phone" placeholder="Enter your phone number" name="phone" id="phone">
+                    <p id="errorContactPhone" hidden class="errorForm">Please enter a valid phone number</p>
+                </div>
+
             </div>
 
-        </div>
+            <div class="contact-message">
 
-        <div class="contact-message">
-
-            <label for="message">Message</label>
-            <textarea placeholder="Enter your message" name="message" id="message"></textarea>
-            <p id="errorContactMessage" hidden class="errorForm">Please enter a message</p>
-           
-        </div>
-
-        <div class="contact-button">
-
-            <button type="submit" id="submitBtn">Submit</button>
-            <p id="successContact" hidden class="successForm">Your message has been sent successfully!</p>
-        
-        </div>
-
-        <div class="contact-modal">
-
-            <div class="modal-content">
-                <span class="close-button">X</span>
-                <img src="/images/logos/circle.svg" alt="logo circle" class="modal-logo">
-                <h2>Form Submitted</h2>
-                <p>Thank you! Your form has been sent.</p>
+                <label for="message">Message</label>
+                <textarea placeholder="Enter your message" name="message" id="message"></textarea>
+                <p id="errorContactMessage" hidden class="errorForm">Please enter a message</p>
+            
             </div>
 
-        </div>
+            <div class="contact-button">
 
-    </form>
+                <button type="submit" id="submitBtn">Submit</button>
+                <p id="successContact" hidden class="successForm">Your message has been sent successfully!</p>
+            
+            </div>
+
+            <div class="contact-modal">
+
+                <div class="modal-content">
+                    <span class="close-button">X</span>
+                    <img src="/images/logos/circle.svg" alt="logo circle" class="modal-logo">
+                    <h2>Form Submitted</h2>
+                    <p>Thank you! Your form has been sent.</p>
+                </div>
+
+            </div>
+
+        </form>
+    </head>
 
     <footer class="footer">
 
@@ -113,8 +141,8 @@
 
     </footer>
 
-     /* enlace al script de contact*/
     <script src="Scripts/contact.js"></script>
+    <script src="Scripts/index.js"></script>
 
 </body>
 

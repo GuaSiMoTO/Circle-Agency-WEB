@@ -26,9 +26,18 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+html, body {
     background-color: var(--color-light-1);
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden; /* Corta cualquier cosa que sobresalga por los lados */
+    width: 100%;
+    position: relative;
+}
+
+/* Imágenes. Aseguramos que se muestren correctamente */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Configuración básica de la barra */
@@ -37,6 +46,10 @@ nav {
     justify-content: space-between; 
     align-items: center;            
     padding: 40px 20%;              
+}
+.nav-menu-icon {
+  display: none; /* Oculto por defecto, se mostrará en móvil */
+
 }
 
 .nav-links {
@@ -76,11 +89,66 @@ nav {
     height: 30px;                   
 }
 
+/* Menú Lateral Móvil */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Totalmente fuera de la pantalla a la derecha */
+    width: 200px;  /* Ancho del menú */
+    height: 100%;
+    background-color: rgba(7, 42, 200, 0.90); /* Azul oscuro transparente */
+    z-index: 2000; /* Por encima de todo */
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px;
+    transition: right 0.5s ease-in-out; /* Animación de deslizamiento */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
+
+/* Clase que activaremos con JS para mostrar el menú */
+.mobile-menu.active {
+    right: 0; /* Lo movemos al borde derecho */
+}
+
+.close-menu {
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    font-size: 35px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 30px;
+}
+
+.mobile-nav-links a {
+    color: var(--color-dark-2);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.mobile-nav-links a:hover {
+    color: black;
+    opacity: 0.7;
+}
+
+/* HERO SECTION*/
 .div-hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 20%;
+    padding: 30px 20%;
 }
 
 .hero-content {
@@ -89,7 +157,7 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: var(--color-dark-1);
     line-height: 1.1;
     margin-bottom: 20px;
@@ -133,34 +201,37 @@ nav {
 }
 
 .hero-image {
-    flex: 1;
     position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
 }
-
+/* Tarjeta Principal del chico con fondo amarrillo */
 .hero-image img[alt="Hero Image"] {
     width: 100%;
-    max-width: 450px;
+    height: auto;
     z-index: 2;
 }
 
-.hero-image img[alt="Hero Image 2"], 
+/* Tarjeta Superior Izquierda (Tarjeta de Crédito) */
+.hero-image img[alt="Hero Image 2"] {
+    position: absolute;
+    width: 60%; /* Tamaño relativo al contenedor */
+    top: -5%;    /* Se mantiene arriba aunque cambie el tamaño */
+    left: -10%; /* Sobresale un poco hacia la izquierda */
+    z-index: 3;
+}
+
+/* Tarjeta Inferior Derecha (Project accepted) */
 .hero-image img[alt="Hero Image 3"] {
     position: absolute;
+    width: 60%;
+    bottom: -20%; /* Se mantiene abajo */
+    right: -20%;/* Sobresale un poco hacia la derecha */
     z-index: 3;
-    width: 300px; 
-}
-
-.hero-image img[alt="Hero Image 2"] {
-    top: 0;
-    left: -5%;
-}
-
-.hero-image img[alt="Hero Image 3"] {
-    bottom: -25%;
-    right: -5%;
 }
 
 /* Clients Section (Cambiado a ID) */
@@ -279,8 +350,8 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 1350px;         
-    margin: 80px auto;         
+    max-width: 1350px;          
+    margin: 80px auto;          
     padding: 80px 40px;        
     position: relative;        
     min-height: 600px;         
@@ -428,10 +499,14 @@ nav {
 .footer {
     background-color: var(--color-light-1);
     display: flex;
-    justify-content: space-between; 
-    align-items: flex-start;        
-    padding: 60px 20%;
-    margin: 50px 0px;  
+    justify-content: space-around; 
+    align-items: flex-start;
+    max-width: 1300px; 
+    margin: 50px auto;       
+    padding: 80px 40px;
+    width: 100%;
+    box-sizing: border-box;
+     
 }
 
 .address-info {
@@ -444,16 +519,16 @@ nav {
 }
 
 .address-info p {
-    color: var(--color-dark-2);
+    color: black;
     font-size: 16px;
     line-height: 1.5;
 }
 
 .sitemap {
     display: grid;
-    grid-template-columns: repeat(3, auto); 
+    grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(2, auto);    
-    gap: 60px 60px; 
+    gap: 40px 50px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -471,11 +546,11 @@ nav {
     color: var(--color-blue-1);
 }
 
-/* Newsletter (Cambiado a ID) */
+/* Newsletter */
 #newsletter {
     background-color: var(--color-yellow);
-    max-width: 1350px;         
-    margin: 20px auto;         
+    max-width: 1350px;          
+    margin: 20px auto;          
     min-height: 400px;    
     display: flex;        
     flex-direction: column; 
@@ -505,7 +580,7 @@ nav {
 
 .input-container {
     position: relative;
-    max-width: 550px;
+    width: 500px;
 }
 
 .mail-icon {
@@ -518,6 +593,7 @@ nav {
 }
 
 #newsletter input {
+    text-align: center;
     width: 100%;
     padding: 25px 25px 25px 60px; 
     border: none;
@@ -746,50 +822,246 @@ article {
 }
 
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
+/* RESPONSIVE (Móviles y Tablets) */
+
+/* RESPONSIVE contact.html */
+@media (max-width: 1406px) {
+    #projects, #services, #clients {
+        padding: 50px; /* Reducimos el padding a 50px */
+    }
+    /* atacamos antes la section hero para que se vea mejor*/
+   /* section hero */
     .div-hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 5%;
+    margin: 0px 20px;
+    flex-direction: column; /* Apila los elementos */
+    text-align: left;     /* Centra el texto para que luzca mejor en móvil */
+    padding: 40px 20px;     /* Reducimos el padding lateral */
+    padding-bottom: 100px;
     }
-    
+
     .hero-content {
-        margin-bottom: 50px;
+        max-width: 100%;
+        margin-bottom: 10px;    /* Espacio antes de la imagen */
     }
 
-    .hero-image img[alt="Hero Image 2"] {
-        left: 0;
+    .hero-content h1 {
+        font-size: 3rem;      /* Ajustamos el tamaño del título */
     }
 
+    .hero-content h3 {
+        font-size: 1.5rem;      /* Ajustamos el tamaño del subtítulo */
+    }
+
+    .hero-image img[alt="Hero Image"] {
+        width: 1000px;
+    }
+
+    .hero-image img[alt="Hero Image 2"], 
+    .hero-image img[alt="Hero Image 3"] {
+        display: none; /* La solución más limpia para móviles: ocultar las tarjetas */
+    }
+
+
+    /* section projects */
+    /* Forzamos a que el contenedor use exactamente 2 columnas */
+    .project-contaier {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px; /* espacio entre las tarjetas */
+       
+    }
+    /* Si el último elemento es impar, lo centramos ocupando las dos columnas */
+    .project-contaier article:last-child:nth-child(odd) {
+        grid-column: 1 / span 2; /* Ocupa el ancho de las dos columnas */
+        justify-self: center;    /* Se centra horizontalmente */
+        width: 45%;              /* Ajusta este ancho para que coincida con las de arriba */
+    }
+    
+    /* section services */
+
+    /* Corregido: Usamos el ID #services para que el navegador sepa a qué sección aplicar el grid de 2 columnas */
     #services .project-contaier {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 
-    #testimonial {
-        padding: 80px 20px;
+    /* Centramos la última tarjeta de servicios si es impar */
+    #services .project-contaier article:last-child:nth-child(odd) {
+        grid-column: 1 / span 2;
+        justify-self: center;
+        width: 45%;
+    }
+
+
+
+}
+
+@media (max-width: 986px) {
+    
+    nav, .div-hero, #projects, #services, #clients {
+        padding: 20px; /* Reducimos el padding de 20% a algo fijo para móvil */
+    }
+
+    /* NAVEGACIÓN */
+    .nav-links, .btn-contact {
+        display: none; /* Ocultamos los links y el botón en móvil */
+    }
+
+    /* Creamos el hueco para la hamburguesa */
+    .nav-mobile-hamburger {
+        display: block;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: relative;
+        border: 2px dashed #072ac8; /* Marcador visual temporal */
+    }
+
+    .nav-menu-icon {
+        display: flex; /* Ahora sí se muestra el contenedor */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    /* Dibujamos las 3 rayitas (los <span> que tienes en el HTML) */
+    .nav-menu-icon span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-blue-1); /* Color azul de tu marca */
+        border-radius: 10px;
+        transition: all 0.3s linear;
+    }
+    /*INDEX html*/
+
+    /* FORMULARIO */
+    #contact-form {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #contact-form h1 {
+        font-size: 2.5rem; /* Título más pequeño para que no se corte */
+    }
+
+    /* La fila de Email y Phone que era 'flex' ahora es vertical */
+    #contact-form > div:nth-of-type(2) {
+        flex-direction: column;
+        gap: 0; /* Quitamos el gap lateral */
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form input[type="phone"],
+    #contact-form textarea {
+        padding: 15px; /* Inputs menos altos para ahorrar espacio */
+    }
+
+    #submitBtn {
+        padding: 18px;
+    }
+
+    /* MODAL RESPONSIVE */
+    .modal-content {
+        width: 90%;
+        padding: 30px;
     }
     
-    #testimonial-text h3 {
-        font-size: 2rem;
+    /* FOOTER RESPONSIVE */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0; /* Quitamos márgenes exteriores */
+        width: 100%;  /* Que ocupe todo el ancho */
+        max-width: 100%;
+        padding: 40px 20px;
+    }
+
+    .address-info {
+        padding-bottom: 20px;
+    }
+    .sitemap {
+        gap: 20px; /* Gap mucho más pequeño para que quepa en pantalla */
     }
     
-    .testimonial-emojis {
-        display: none;
+
+    .sitemap li {
+        text-align: center;
+    }
+
+    /* MENU HAMBURGUESA*/
+
+    /* Mostramos y damos estilo al contenedor de la hamburguesa */
+    .nav-menu-icon {
+        display: flex;
     }
 }
 
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .sitemap {
-        grid-template-columns: repeat(2, 1fr); 
+@media (max-width: 767px){
+
+    /* Forzamos una sola columna para Proyectos y Servicios */
+    .project-contaier, 
+    #services .project-contaier {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .project-contaier {
-        grid-template-columns: 1fr;
+    /* Reseteamos el comportamiento de la tarjeta 'impar' para que ocupe todo el ancho en móvil */
+    .project-contaier article:last-child:nth-child(odd),
+    #services .project-contaier article:last-child:nth-child(odd) {
+        grid-column: auto;
+        width: 100%;
     }
+    /*section testimonial*/
+    /* Ocultamos los 4 emojis */
+    .testimonial-emojis img {
+            display: none;
+    }
+
+    #testimonial {
+        padding: 70px 20px;
+        min-height: auto;        /* Dejamos que el contenido mande sobre la altura */
+        background-size: cover;  /* Asegura que la imagen de la órbita cubra el fondo */
+        background-position: center;
+    }
+
+    .testimonial-text h3 {
+        font-size: 1.8rem;       /* Reducimos un poco el tamaño de la cita */
+    }
+
+    .testimonial-quote p{
+        font-size: 1.5rem;      /* Reducimos el tamaño del texto de la cita */
+        width: 580px;
+    }
+
+    .testimonial-quote,
+    .testimonial-text,
+    .testimonial-profile {
+        margin: 15px 0;
+    }
+
+    /* section newsletter */
+    #newsletter form {
+    flex-direction: column; /* Apila input y botón */
+    width: 100%;
+    max-width: 400px;       /* Evita que el formulario sea demasiado ancho */
+    }
+
+    .input-container {
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .boton-estilo {
+        width: 100%;            /* El botón ocupa todo el ancho disponible */
+        justify-content: center;
+        padding: 20px;          /* Ajuste de altura para que sea fácil de pulsar */
+    }
+
+
 }

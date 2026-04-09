@@ -69,5 +69,5 @@ function renderOtherProjects(others) {
     });
 }
 
-// Ejecutamos la carga
+// Ejecutamos la función para cargar los datos al abrir la página
 loadData();

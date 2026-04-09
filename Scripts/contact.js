@@ -56,3 +56,4 @@ function sendForm(event) {
 document.querySelector('.close-button').addEventListener('click', () => {
     document.querySelector('.contact-modal').style.display = 'none';
 });
+
