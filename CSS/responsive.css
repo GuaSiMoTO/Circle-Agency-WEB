@@ -4,6 +4,7 @@
     #projects, #services, #clients {
         padding: 50px; /* Reducimos el padding a 50px */
     }
+
     /* atacamos antes la section hero para que se vea mejor*/
    /* section hero */
     .div-hero {
@@ -45,6 +46,7 @@
         gap: 50px; /* espacio entre las tarjetas */
        
     }
+
     /* Si el último elemento es impar, lo centramos ocupando las dos columnas */
     .project-contaier article:last-child:nth-child(odd) {
         grid-column: 1 / span 2; /* Ocupa el ancho de las dos columnas */
@@ -54,7 +56,7 @@
     
     /* section services */
 
-    /* Corregido: Usamos el ID #services para que el navegador sepa a qué sección aplicar el grid de 2 columnas */
+    /* Usamos el ID #services para que el navegador sepa a qué sección aplicar el grid de 2 columnas */
     #services .project-contaier {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -83,16 +85,6 @@
         display: none; /* Ocultamos los links y el botón en móvil */
     }
 
-    /* Creamos el hueco para la hamburguesa */
-    .nav-mobile-hamburger {
-        display: block;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
-        position: relative;
-        border: 2px dashed #072ac8; /* Marcador visual temporal */
-    }
-
     .nav-menu-icon {
         display: flex; /* Ahora sí se muestra el contenedor */
         flex-direction: column;
@@ -106,13 +98,12 @@
     .nav-menu-icon span {
         width: 100%;
         height: 3px;
-        background-color: var(--color-blue-1); /* Color azul de tu marca */
+        background-color: var(--color-blue-1); 
         border-radius: 10px;
         transition: all 0.3s linear;
     }
-    /*INDEX html*/
 
-    /* FORMULARIO */
+   /* FORMULARIO */
     #contact-form {
         margin: 20px;
         padding: 20px;
@@ -139,12 +130,6 @@
         padding: 18px;
     }
 
-    /* MODAL RESPONSIVE */
-    .modal-content {
-        width: 90%;
-        padding: 30px;
-    }
-    
     /* FOOTER RESPONSIVE */
     .footer {
         flex-direction: column;
@@ -236,6 +221,38 @@
         width: 100%;            /* El botón ocupa todo el ancho disponible */
         justify-content: center;
         padding: 20px;          /* Ajuste de altura para que sea fácil de pulsar */
+    }
+
+    /* MODAL RESPONSIVE */
+    .modal-content {
+        /* Reducimos el ancho y el padding para que sea más compacto y cuadrado */
+        width: 85%; 
+        max-width: 320px; 
+        padding: 40px 20px; /* Padding vertical más equilibrado */
+        border-radius: 10px;
+    }
+
+    .modal-logo {
+        width: 50px; /* Logo más pequeño */
+        top: 15px;
+        left: 15px;
+    }
+
+    .close-button {
+        top: 10px;
+        right: 15px;
+        font-size: 22px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.3rem; /* Título más proporcionado */
+        margin-top: 1opx;  /* Dejamos espacio para el logo superior */
+        padding-bottom: 10px;
+    }
+
+    .modal-content p {
+        font-size: 0.95rem; /* Texto de cuerpo un poco más pequeño */
+        line-height: 1.4;
     }
 
 
