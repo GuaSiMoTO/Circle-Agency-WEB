@@ -18,7 +18,7 @@ closeBtn.addEventListener('click', () => {
 window.addEventListener('click', (e) => {
     if (e.target === mobileMenu) {
         mobileMenu.classList.remove('active');
-    }
+    };
 });
 
 // Botón "Volver al inicio"
@@ -36,8 +36,8 @@ function scrollFunction() {
         btnBackToTop.style.display = "flex"; // Cambiamos de none a flex para mostrar el botón
     } else {
         btnBackToTop.style.display = "none";
-    }
-}
+    };
+};
 
 // Función para que al hacer clic suba suavemente
 btnBackToTop.addEventListener("click", function() {

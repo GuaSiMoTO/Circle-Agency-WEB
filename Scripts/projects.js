@@ -16,14 +16,14 @@ async function loadData() {
 
         if (!queryId) queryId = '1'; // Si no hay ID, por defecto el 1
 
-        // segundo
+    
         // El proyecto principal es el que coincida con el ID de la URL con find
         const mainProject = data.find(project => project.uuid === queryId);
 
         // Los "Otros proyectos" son todos los demás (filtramos el que ya elegimos) con filter
         const otherProjects = data.filter(project => project.uuid !== queryId);
 
-        //tercero
+    
         // Aquí llamaríamos a las funciones de pintar el DOM
         // DOM para el proyecto principal
         renderMainProject(mainProject);
@@ -33,8 +33,8 @@ async function loadData() {
 
     } catch (error) {
         console.error("Error cargando la API:", error);
-    }
-}
+    };
+};
 
 // Función para renderizar el proyecto principal en el DOM
 
@@ -47,7 +47,7 @@ function renderMainProject(project) {
     document.querySelector('#project .project-date').textContent = project.completed_on;
     document.querySelector('#project .project-image img').src = project.image;
     document.querySelector('#project article').innerHTML = project.content;
-}
+};
 
 // Función para renderizar los otros proyectos en el DOM en la sección de "Other Projects"
 function renderOtherProjects(others) {
@@ -67,7 +67,7 @@ function renderOtherProjects(others) {
             </article>
         `;
     });
-}
+};
 
 // Ejecutamos la función para cargar los datos al abrir la página
 loadData();

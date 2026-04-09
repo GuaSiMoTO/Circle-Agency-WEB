@@ -1,0 +1,144 @@
+/* Contact.html Form */
+#contact-form {
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: transparent; 
+}
+
+#contact-form h1 {
+    font-size: 2.5rem; 
+    color: #2b334d;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#contact-form div {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 12px;
+    color: #6b728e;
+    font-size: 1.1rem;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="phone"],
+#message,
+#contact-form textarea {
+    width: 100%;
+    margin-bottom: 1%;
+    padding: 22px;
+    border: none;
+    background-color: #e2e6f0; 
+    font-size: 1rem;
+    color: #2b334d;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Clase que aplicaremos mediante JavaScript para añadir a los inputs si hay error */
+.input-error {
+    border: 3px solid #ff4d4d !important; /* Rojo intenso y borde ancho */
+    outline: none; /* Quitamos el borde azul por defecto de los navegadores */
+}
+/* añadiendo estilo para los mensajes de error */
+.errorForm {
+    color: #ff4d4d;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+#contact-form input:hover, 
+#contact-form textarea:hover {
+    background-color: #d8dceb;
+}
+
+#message {
+    min-height: 200px; 
+}
+
+#contact-form > div:nth-of-type(2) {
+    display: flex;
+    gap: 30px;
+}
+
+#contact-form > div:nth-of-type(2) > div {
+    flex: 1; 
+}
+
+#submitBtn {
+    width: 100%;
+    background-color: #072ac8; 
+    color: white;
+    padding: 25px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #051a80;
+}
+
+/* el modal para submit*/
+/* El contenedor que cubre TODA la pantalla */
+.contact-modal {
+    display: none ; /* Oculto por defecto */
+    position: fixed; /* Se queda fijo aunque hagas scroll */
+    z-index: 1000; /* Siempre por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* La caja blanca del mensaje */
+.modal-content {
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    position: relative; /* Para posicionar la X de cierre */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-logo {
+    position: absolute;
+    width: 80px;
+    margin-bottom: 20px;
+    top: 20px;
+    left: 25px;
+}
+
+.modal-content h2{
+    font-size: 1.7rem;
+    padding-bottom: 5%;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-dark-2);
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: var(--color-blue-1);
+}

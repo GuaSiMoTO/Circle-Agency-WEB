@@ -34,8 +34,8 @@ function sendForm(event) {
             // Quitamos la clase de error si el campo es válido
             form.querySelector(`[name="${fieldName}"]`).classList.remove('input-error');
 
-        }
-    }
+        };
+    };
 
     // 4. Si todo es válido, procedemos
     if (isValid) {
@@ -48,9 +48,9 @@ function sendForm(event) {
         document.querySelector('.contact-modal').style.display = 'flex';
         
         // Limpiar el formulario tras el envío
-        //form.reset();
-    }
-}
+        form.reset();
+    };
+};
 
 // Lógica para cerrar el modal al hacer clic en la X
 document.querySelector('.close-button').addEventListener('click', () => {

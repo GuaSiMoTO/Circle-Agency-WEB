@@ -1,0 +1,352 @@
+/* HERO SECTION*/
+.div-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20%;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: var(--color-dark-1);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+.hero-content h3 {
+    font-size: 1.1rem;
+    color: var(--color-dark-2);
+    font-weight: normal;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-content .btn-see,
+.hero-content .btn-get {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+
+.hero-content .btn-get {
+    background-color: var(--color-blue-1);
+    color: white;
+}
+
+.btn-get:hover {
+    color: var(--color-dark-2);
+}
+
+.hero-content .btn-see {
+    color: var(--color-dark-2);
+}
+
+.btn-see:hover {
+    color: var(--color-blue-1);
+}
+
+.hero-image {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Tarjeta Principal del chico con fondo amarrillo */
+.hero-image img[alt="Hero Image"] {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+/* Tarjeta Superior Izquierda (Tarjeta de Crédito) */
+.hero-image img[alt="Hero Image 2"] {
+    position: absolute;
+    width: 60%; /* Tamaño relativo al contenedor */
+    top: -5%;    /* Se mantiene arriba aunque cambie el tamaño */
+    left: -10%; /* Sobresale un poco hacia la izquierda */
+    z-index: 3;
+}
+
+/* Tarjeta Inferior Derecha (Project accepted) */
+.hero-image img[alt="Hero Image 3"] {
+    position: absolute;
+    width: 60%;
+    bottom: -20%; /* Se mantiene abajo */
+    right: -20%;/* Sobresale un poco hacia la derecha */
+    z-index: 3;
+}
+
+/* Clients Section */
+#clients {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;           
+    flex-wrap: wrap;               
+    padding: 60px 20%;             
+    gap: 30px;                     
+}
+
+#clients a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;                  
+    transition: all 0.3s ease;
+}
+
+#clients img {
+    max-width: 150px;              
+    height: auto;
+    filter: grayscale(100%);       
+}
+
+#clients a:hover {
+    opacity: 1;
+}
+
+#clients a:hover img {
+    filter: grayscale(0%);
+}
+
+/* Testimonial Section (Cambiado a ID) */
+#testimonial {
+    background-color: var(--color-dark-1);
+    background-image: url("../images/testimonial-section/orbit.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1350px;          
+    margin: 80px auto;          
+    padding: 80px 40px;        
+    position: relative;        
+    min-height: 600px;         
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between; 
+    align-items: center;       
+    color: white;              
+}
+
+.testimonial-text {
+    max-width: 700px;
+}
+
+.testimonial-text h3 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+}
+
+.testimonial-quote {
+    max-width: 850px;
+}
+
+.testimonial-quote p {
+    font-size: 1.6rem;
+    color: var(--color-yellow); 
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+.testimonial-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testimonial-profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-profile-info {
+    text-align: left;
+}
+
+.testimonial-profile-info .name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.testimonial-profile-info .origin {
+    color: var(--color-dark-2); 
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.testimonial-emojis img {
+    position: absolute;
+    width: 150px;  
+    height: auto;
+}
+
+/* colocamos cada imoji en su posición (cada esquina del div testimonial)*/
+
+.emoji-1 { top: 40px; left: 40px; }
+.emoji-2 { top: 40px; right: 40px; }
+.emoji-3 { bottom: 40px; left: 40px; }
+.emoji-4 { bottom: 40px; right: 40px; }
+
+/* Services Section (Cambiado a ID) */
+#services {
+    padding: 80px 20%;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    color: var(--color-dark-1);
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
+
+#services .project-contaier {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#services article {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+/* añadimos el círculo alrededor de los iconos */
+.circle-icono {
+    background-color: var(--color-blue-4);
+    border-radius: 50%;
+    width: 70px;          /* el tamaño del círculo */
+    height: 70px;         /* Debe ser igual al width para que sea un círculo perfecto */
+    display: flex;        /* Activamos flexbox para centrar el icono */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    margin-left: 25px;    /* Alineado con el padding de tus textos */
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+/* Ajustamos el tamaño del icono dentro del círculo */
+.circle-icono img {
+    width: 35px;          /* El icono debe ser más pequeño que el círculo */
+    height: auto;
+    padding: 0;           /* Quitamos los paddings que movían la imagen */
+    display: block;
+}
+
+#services h4 {
+    font-size: 1.25rem;
+    color: var(--color-dark-1);
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+#services p {
+    color: var(--color-dark-2);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; 
+}
+
+#services a {
+    text-decoration: none;
+    color: var(--color-blue-1);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* ARROW Botón volver al inicio */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: 0;
+    
+    /* Degradado de fondo original */
+    background-image: linear-gradient(
+        200deg,
+        #9500ff,
+        #09f,
+        #00DDFF
+    );
+    border-radius: 50%;
+    
+    /* Dimensiones fijas para círculo perfecto */
+    width: 60px;
+    height: 60px;
+    
+    /* Centrado del contenido */
+    display: none;  /* Oculto por defecto, se mostrará con JS */
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+    transition: .3s;
+    overflow: hidden; /* Importante para el efecto hover */
+}
+
+/* El span ahora lo usamos solo para centrar la flecha CSS */
+#btn-back-to-top span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+/* DIBUJAMOS LA FLECHA CSS, porque en html no se puede dar el grosor a la flecha*/
+/* La línea vertical de la flecha */
+#btn-back-to-top span::before {
+    content: '';
+    position: absolute;
+    width: 6px;          
+    height: 16px;         
+    background-color: #fff; 
+    border-radius: 3px;
+    top: 31px;            
+}
+
+/* La punta de la flecha (Triángulo chato) */
+#btn-back-to-top span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;  /* Aumentado ligeramente para anchura visual */
+    border-right: 14px solid transparent; /* Aumentado ligeramente para anchura visual */
+    border-bottom: 18px solid #fff;        /* Altura de la punta ligeramente aumentada */
+    top: 15px;            /* Posición vertical de la punta subida ligeramente */
+}
+
+/* --- EFECTOS HOVER Y ACTIVE --- */
+
+/* Mantenemos tu efecto hover elegante con transparencia */
+#btn-back-to-top:hover span {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#btn-back-to-top:active {
+    transform: scale(0.9);
+}

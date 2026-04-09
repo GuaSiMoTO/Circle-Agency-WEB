@@ -105,167 +105,7 @@ nav {
     box-shadow: -5px 0 15px rgba(0,0,0,0.3);
 }
 
-/* Clase que activaremos con JS para mostrar el menú */
-.mobile-menu.active {
-    right: 0; /* Lo movemos al borde derecho */
-}
-
-.close-menu {
-    position: absolute;
-    top: 17px;
-    right: 25px;
-    font-size: 35px;
-    color: black;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.mobile-nav-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 50px;
-}
-
-.mobile-nav-links li {
-    margin-bottom: 30px;
-}
-
-.mobile-nav-links a {
-    color: var(--color-dark-2);
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    transition: opacity 0.3s;
-}
-
-.mobile-nav-links a:hover {
-    color: black;
-    opacity: 0.7;
-}
-
-/* HERO SECTION*/
-.div-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 20%;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 500px;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    color: var(--color-dark-1);
-    line-height: 1.1;
-    margin-bottom: 20px;
-    font-family: sans-serif;
-}
-
-.hero-content h3 {
-    font-size: 1.1rem;
-    color: var(--color-dark-2);
-    font-weight: normal;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.hero-content .btn-see,
-.hero-content .btn-get {
-    display: inline-block;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 20px;
-    transition: all 0.3s;
-}
-
-.hero-content .btn-get {
-    background-color: var(--color-blue-1);
-    color: white;
-}
-
-.btn-get:hover {
-    color: var(--color-dark-2);
-}
-
-.hero-content .btn-see {
-    background-color: transparent;
-    color: var(--color-dark-2);
-}
-
-.btn-see:hover {
-    color: var(--color-blue-1);
-}
-
-.hero-image {
-    position: relative; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    max-width: 500px;
-    margin: 0 auto;
-}
-/* Tarjeta Principal del chico con fondo amarrillo */
-.hero-image img[alt="Hero Image"] {
-    width: 100%;
-    height: auto;
-    z-index: 2;
-}
-
-/* Tarjeta Superior Izquierda (Tarjeta de Crédito) */
-.hero-image img[alt="Hero Image 2"] {
-    position: absolute;
-    width: 60%; /* Tamaño relativo al contenedor */
-    top: -5%;    /* Se mantiene arriba aunque cambie el tamaño */
-    left: -10%; /* Sobresale un poco hacia la izquierda */
-    z-index: 3;
-}
-
-/* Tarjeta Inferior Derecha (Project accepted) */
-.hero-image img[alt="Hero Image 3"] {
-    position: absolute;
-    width: 60%;
-    bottom: -20%; /* Se mantiene abajo */
-    right: -20%;/* Sobresale un poco hacia la derecha */
-    z-index: 3;
-}
-
-/* Clients Section (Cambiado a ID) */
-#clients {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;           
-    flex-wrap: wrap;               
-    padding: 60px 20%;             
-    gap: 30px;                     
-}
-
-#clients a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.7;                  
-    transition: all 0.3s ease;
-}
-
-#clients img {
-    max-width: 150px;              
-    height: auto;
-    filter: grayscale(100%);       
-}
-
-#clients a:hover {
-    opacity: 1;
-}
-
-#clients a:hover img {
-    filter: grayscale(0%);
-}
-
+/* Estilos de las tarjetas de projects en index.html y projects.html*/
 /* Projects Section*/
 #projects {
     padding: 80px 20%;
@@ -302,9 +142,6 @@ nav {
     display: block;
     object-fit: cover;
 }
-
-
-
 
 .project-contaier h4, 
 .project-contaier p {
@@ -343,207 +180,52 @@ nav {
     text-decoration: underline;
 }
 
-/* Testimonial Section (Cambiado a ID) */
-#testimonial {
-    background-color: var(--color-dark-1);
-    background-image: url("../images/testimonial-section/orbit.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 1350px;          
-    margin: 80px auto;          
-    padding: 80px 40px;        
-    position: relative;        
-    min-height: 600px;         
-    display: flex;
-    flex-direction: column;    
-    justify-content: space-between; 
-    align-items: center;       
-    color: white;              
+/*poner sombra muy suave detrás de las tarjetas de projects, services y la imagen general de projects.html*/
+/*en homepage y porject page*/
+.project-image img{
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+.project-contaier article{
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-.testimonial-text {
-    max-width: 700px;
+
+/* Clase que activaremos con JS para mostrar el menú */
+.mobile-menu.active {
+    right: 0; /* Lo movemos al borde derecho */
 }
 
-.testimonial-text h3 {
-    font-size: 2.8rem;
-    line-height: 1.2;
-    margin: 0;
-    text-align: center;
-}
-
-.testimonial-quote {
-    max-width: 850px;
-}
-
-.testimonial-quote p {
-    font-size: 1.6rem;
-    color: var(--color-yellow); 
-    line-height: 1.5;
-    margin: 0;
-    text-align: center;
-}
-
-.testimonial-profile {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.testimonial-profile img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.testimonial-profile-info {
-    text-align: left;
-}
-
-.testimonial-profile-info .name {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-.testimonial-profile-info .origin {
-    color: var(--color-dark-2); 
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-.testimonial-emojis img {
+.close-menu {
     position: absolute;
-    width: 150px;  
-    height: auto;
-}
-
-/* colocamos cada imoji en su posición (cada esquina del div testimonial)*/
-
-.emoji-1 { top: 40px; left: 40px; }
-.emoji-2 { top: 40px; right: 40px; }
-.emoji-3 { bottom: 40px; left: 40px; }
-.emoji-4 { bottom: 40px; right: 40px; }
-
-/* Services Section (Cambiado a ID) */
-#services {
-    padding: 80px 20%;
-}
-
-#services h2 {
-    font-size: 2.5rem;
-    color: var(--color-dark-1);
-    margin-bottom: 60px;
-    font-family: sans-serif;
-}
-
-#services .project-contaier {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-#services article {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-}
-
-/* añadimos el círculo alrededor de los iconos */
-.circle-icono {
-    background-color: var(--color-blue-4);
-    border-radius: 50%;
-    width: 70px;          /* Ajusta el tamaño del círculo aquí */
-    height: 70px;         /* Debe ser igual al width para que sea un círculo perfecto */
-    display: flex;        /* Activamos flexbox para centrar el icono */
-    justify-content: center; /* Centrado horizontal */
-    align-items: center;     /* Centrado vertical */
-    margin-left: 25px;    /* Alineado con el padding de tus textos */
-    margin-top: 25px;
-    margin-bottom: 20px;
-}
-
-/* Ajustamos el tamaño del icono (SVG) dentro del círculo */
-.circle-icono img {
-    width: 35px;          /* El icono debe ser más pequeño que el círculo */
-    height: auto;
-    padding: 0;           /* Quitamos los paddings antiguos que movían la imagen */
-    display: block;
-}
-
-#services h4 {
-    font-size: 1.25rem;
-    color: var(--color-dark-1);
-    margin-bottom: 10px;
-    font-family: sans-serif;
-}
-
-#services p {
-    color: var(--color-dark-2);
-    line-height: 1.6;
-    margin-bottom: 25px;
-    flex-grow: 1; 
-}
-
-#services a {
-    text-decoration: none;
-    color: var(--color-blue-1);
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-/* Footer */
-.footer {
-    background-color: var(--color-light-1);
-    display: flex;
-    justify-content: space-around; 
-    align-items: flex-start;
-    max-width: 1300px; 
-    margin: 50px auto;       
-    padding: 80px 40px;
-    width: 100%;
-    box-sizing: border-box;
-     
-}
-
-.address-info {
-    max-width: 250px;
-}
-
-.address-info img {
-    height: 30px;
-    margin-bottom: 20px;
-}
-
-.address-info p {
+    top: 17px;
+    right: 25px;
+    font-size: 35px;
     color: black;
-    font-size: 16px;
-    line-height: 1.5;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.sitemap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, auto);    
-    gap: 40px 50px;
+.mobile-nav-links {
     list-style: none;
-    margin: 0;
     padding: 0;
-    text-align: center; 
+    margin-top: 50px;
 }
 
-.sitemap a {
-    text-decoration: none;
+.mobile-nav-links li {
+    margin-bottom: 30px;
+}
+
+.mobile-nav-links a {
     color: var(--color-dark-2);
-    font-size: 17px;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: opacity 0.3s;
 }
 
-.sitemap a:hover {
-    color: var(--color-blue-1);
+.mobile-nav-links a:hover {
+    color: black;
+    opacity: 0.7;
 }
 
 /* Newsletter */
@@ -622,523 +304,56 @@ nav {
     outline: 2px solid var(--color-blue-1);
 }
 
-/* El resto de estilos (Contact form, Project.html, Responsive) permanecen igual */
-
-/* Contact.html Form */
-#contact-form {
-    max-width: 1300px;
-    margin: 60px auto;
-    padding: 40px;
-    background-color: transparent; 
-}
-
-#contact-form h1 {
-    font-size: 4rem; 
-    color: #2b334d;
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-#contact-form div {
-    margin-bottom: 20px;
-}
-
-#contact-form label {
-    display: block;
-    margin-bottom: 12px;
-    color: #6b728e;
-    font-size: 1.1rem;
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form input[type="phone"],
-#message,
-#contact-form textarea {
-    width: 100%;
-    margin-bottom: 1%;
-    padding: 22px;
-    border: none;
-    background-color: #e2e6f0; 
-    font-size: 1rem;
-    color: #2b334d;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-/* Clase que aplicaremos mediante JavaScript para añadir a los inputs si hay error */
-.input-error {
-    border: 3px solid #ff4d4d !important; /* Rojo intenso y borde ancho */
-    outline: none; /* Quitamos el borde azul por defecto de los navegadores */
-}
-/* añadiendo estilo para los mensajes de error */
-.errorForm {
-    color: #ff4d4d;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-top: 5px;
-}
-
-#contact-form input:hover, 
-#contact-form textarea:hover {
-    background-color: #d8dceb;
-}
-
-#message {
-    min-height: 200px; 
-}
-
-#contact-form > div:nth-of-type(2) {
+/* Footer */
+.footer {
+    background-color: var(--color-light-1);
     display: flex;
-    gap: 30px;
-}
-
-#contact-form > div:nth-of-type(2) > div {
-    flex: 1; 
-}
-
-#submitBtn {
+    justify-content: space-around; 
+    align-items: flex-start;
+    max-width: 1300px; 
+    margin: 50px auto;       
+    padding: 80px 40px;
     width: 100%;
-    background-color: #072ac8; 
-    color: white;
-    padding: 25px;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    box-sizing: border-box;
+     
 }
 
-#submitBtn:hover {
-    background-color: #051a80;
+.address-info {
+    max-width: 250px;
 }
 
-/* el modal para submit*/
-/* El contenedor que cubre TODA la pantalla */
-.contact-modal {
-    display: none ; /* Oculto por defecto */
-    position: fixed; /* Se queda fijo aunque hagas scroll */
-    z-index: 1000; /* Siempre por encima de todo */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-    justify-content: center;
-    align-items: center;
-}
-
-/* La caja blanca del mensaje */
-.modal-content {
-    background-color: white;
-    padding: 50px;
-    border-radius: 15px;
-    text-align: center;
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    position: relative; /* Para posicionar la X de cierre */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.modal-logo {
-    position: absolute;
-    width: 80px;
+.address-info img {
+    height: 30px;
     margin-bottom: 20px;
-    top: 20px;
-    left: 25px;
 }
 
-.modal-content h2{
-    font-size: 1.7rem;
-    padding-bottom: 5%;
+.address-info p {
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.close-button {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 25px;
-    font-weight: bold;
+.sitemap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto);    
+    gap: 40px 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+.sitemap a {
+    text-decoration: none;
     color: var(--color-dark-2);
-    cursor: pointer;
+    font-size: 17px;
+    transition: color 0.3s ease;
 }
 
-.close-button:hover {
+.sitemap a:hover {
     color: var(--color-blue-1);
 }
 
-/* Projects.html Styles */
-
-#project {
-    max-width: 1300px; 
-    width: 100%;
-    margin: 80px auto; 
-    padding: 0 40px;
-}
-
-.title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #1a202c;
-    margin-bottom: 8px;
-}
-
-#project > div:first-of-type {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    margin-bottom: 40px;
-    color: #718096; 
-    font-size: 1.23rem;
-}
-
-.project-image {
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-/* Imagen principal de projects.html*/
-.project-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-}
-
-article {
-    color: #4a5568;
-    font-size: 1rem;
-    text-align: justify; 
-    max-width: 100%;
-}
-
-/*poner sombra muy suave detrás de las tarjetas de projects, services y la imagen general de projects.html*/
-.project-image img{
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-}
-.project-contaier article{
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-}
-
-/* Botón volver al inicio - Contenedor Principal */
-#btn-back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    border: 0;
-    
-    /* Degradado de fondo original */
-    background-image: linear-gradient(
-        200deg,
-        #9500ff,
-        #09f,
-        #00DDFF
-    );
-    border-radius: 50%;
-    
-    /* Dimensiones fijas para círculo perfecto */
-    width: 60px;
-    height: 60px;
-    
-    /* Centrado del contenido */
-    display: none;  /* Oculto por defecto, se mostrará con JS */
-    justify-content: center;
-    align-items: center;
-    
-    padding: 0;
-    cursor: pointer;
-    z-index: 1000;
-    transition: .3s;
-    overflow: hidden; /* Importante para el efecto hover */
-}
-
-/* El span ahora lo usamos solo para centrar la flecha CSS */
-#btn-back-to-top span {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-}
-
-/* DIBUJAMOS LA FLECHA CSS, porque en html no se puede dar el grosor a la flecha*/
-/* La línea vertical de la flecha */
-#btn-back-to-top span::before {
-    content: '';
-    position: absolute;
-    width: 6px;          
-    height: 16px;         
-    background-color: #fff; 
-    border-radius: 3px;
-    top: 31px;            
-}
-
-/* La punta de la flecha (Triángulo chato) */
-#btn-back-to-top span::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 14px solid transparent;  /* Aumentado ligeramente para anchura visual */
-    border-right: 14px solid transparent; /* Aumentado ligeramente para anchura visual */
-    border-bottom: 18px solid #fff;        /* Altura de la punta ligeramente aumentada */
-    top: 15px;            /* Posición vertical de la punta subida ligeramente */
-}
-
-/* --- EFECTOS HOVER Y ACTIVE --- */
-
-/* Mantenemos tu efecto hover elegante con transparencia */
-#btn-back-to-top:hover span {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#btn-back-to-top:active {
-    transform: scale(0.9);
-}
-
-/* RESPONSIVE (Móviles y Tablets) */
-
-/* RESPONSIVE contact.html */
-@media (max-width: 1406px) {
-    #projects, #services, #clients {
-        padding: 50px; /* Reducimos el padding a 50px */
-    }
-    /* atacamos antes la section hero para que se vea mejor*/
-   /* section hero */
-    .div-hero {
-    margin: 0px 20px;
-    flex-direction: column; /* Apila los elementos */
-    text-align: left;     /* Centra el texto para que luzca mejor en móvil */
-    padding: 40px 20px;     /* Reducimos el padding lateral */
-    padding-bottom: 100px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 10px;    /* Espacio antes de la imagen */
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;      /* Ajustamos el tamaño del título */
-    }
-
-    .hero-content h3 {
-        font-size: 1.5rem;      /* Ajustamos el tamaño del subtítulo */
-    }
-
-    .hero-image img[alt="Hero Image"] {
-        width: 1000px;
-    }
-
-    .hero-image img[alt="Hero Image 2"], 
-    .hero-image img[alt="Hero Image 3"] {
-        display: none; /* La solución más limpia para móviles: ocultar las tarjetas */
-    }
 
 
-    /* section projects */
-    /* Forzamos a que el contenedor use exactamente 2 columnas */
-    .project-contaier {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px; /* espacio entre las tarjetas */
-       
-    }
-    /* Si el último elemento es impar, lo centramos ocupando las dos columnas */
-    .project-contaier article:last-child:nth-child(odd) {
-        grid-column: 1 / span 2; /* Ocupa el ancho de las dos columnas */
-        justify-self: center;    /* Se centra horizontalmente */
-        width: 45%;              /* Ajusta este ancho para que coincida con las de arriba */
-    }
-    
-    /* section services */
-
-    /* Corregido: Usamos el ID #services para que el navegador sepa a qué sección aplicar el grid de 2 columnas */
-    #services .project-contaier {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    /* Centramos la última tarjeta de servicios si es impar */
-    #services .project-contaier article:last-child:nth-child(odd) {
-        grid-column: 1 / span 2;
-        justify-self: center;
-        width: 45%;
-    }
-
-
-
-}
-
-@media (max-width: 986px) {
-    
-    nav, .div-hero, #projects, #services, #clients {
-        padding: 20px; /* Reducimos el padding de 20% a algo fijo para móvil */
-    }
-
-    /* NAVEGACIÓN */
-    .nav-links, .btn-contact {
-        display: none; /* Ocultamos los links y el botón en móvil */
-    }
-
-    /* Creamos el hueco para la hamburguesa */
-    .nav-mobile-hamburger {
-        display: block;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
-        position: relative;
-        border: 2px dashed #072ac8; /* Marcador visual temporal */
-    }
-
-    .nav-menu-icon {
-        display: flex; /* Ahora sí se muestra el contenedor */
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
-    }
-
-    /* Dibujamos las 3 rayitas (los <span> que tienes en el HTML) */
-    .nav-menu-icon span {
-        width: 100%;
-        height: 3px;
-        background-color: var(--color-blue-1); /* Color azul de tu marca */
-        border-radius: 10px;
-        transition: all 0.3s linear;
-    }
-    /*INDEX html*/
-
-    /* FORMULARIO */
-    #contact-form {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    #contact-form h1 {
-        font-size: 2.5rem; /* Título más pequeño para que no se corte */
-    }
-
-    /* La fila de Email y Phone que era 'flex' ahora es vertical */
-    #contact-form > div:nth-of-type(2) {
-        flex-direction: column;
-        gap: 0; /* Quitamos el gap lateral */
-    }
-
-    #contact-form input[type="text"],
-    #contact-form input[type="email"],
-    #contact-form input[type="phone"],
-    #contact-form textarea {
-        padding: 15px; /* Inputs menos altos para ahorrar espacio */
-    }
-
-    #submitBtn {
-        padding: 18px;
-    }
-
-    /* MODAL RESPONSIVE */
-    .modal-content {
-        width: 90%;
-        padding: 30px;
-    }
-    
-    /* FOOTER RESPONSIVE */
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 0; /* Quitamos márgenes exteriores */
-        width: 100%;  /* Que ocupe todo el ancho */
-        max-width: 100%;
-        padding: 40px 20px;
-    }
-
-    .address-info {
-        padding-bottom: 20px;
-    }
-    .sitemap {
-        gap: 20px; /* Gap mucho más pequeño para que quepa en pantalla */
-    }
-    
-
-    .sitemap li {
-        text-align: center;
-    }
-
-    /* MENU HAMBURGUESA*/
-
-    /* Mostramos y damos estilo al contenedor de la hamburguesa */
-    .nav-menu-icon {
-        display: flex;
-    }
-}
-
-@media (max-width: 767px){
-
-    /* Forzamos una sola columna para Proyectos y Servicios */
-    .project-contaier, 
-    #services .project-contaier {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* Reseteamos el comportamiento de la tarjeta 'impar' para que ocupe todo el ancho en móvil */
-    .project-contaier article:last-child:nth-child(odd),
-    #services .project-contaier article:last-child:nth-child(odd) {
-        grid-column: auto;
-        width: 100%;
-    }
-    /*section testimonial*/
-    /* Ocultamos los 4 emojis */
-    .testimonial-emojis img {
-            display: none;
-    }
-
-    #testimonial {
-        padding: 70px 20px;
-        min-height: auto;        /* Dejamos que el contenido mande sobre la altura */
-        background-size: cover;  /* Asegura que la imagen de la órbita cubra el fondo */
-        background-position: center;
-    }
-
-    .testimonial-text h3 {
-        font-size: 1.8rem;       /* Reducimos un poco el tamaño de la cita */
-    }
-
-    .testimonial-quote p{
-        font-size: 1.5rem;      /* Reducimos el tamaño del texto de la cita */
-        width: 580px;
-    }
-
-    .testimonial-quote,
-    .testimonial-text,
-    .testimonial-profile {
-        margin: 15px 0;
-    }
-
-    /* section newsletter */
-    #newsletter form {
-    flex-direction: column; /* Apila input y botón */
-    width: 100%;
-    max-width: 400px;       /* Evita que el formulario sea demasiado ancho */
-    }
-
-    .input-container {
-        align-items: center;
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .boton-estilo {
-        width: 100%;            /* El botón ocupa todo el ancho disponible */
-        justify-content: center;
-        padding: 20px;          /* Ajuste de altura para que sea fácil de pulsar */
-    }
-
-
-}
