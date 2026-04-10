@@ -20,6 +20,12 @@ async function loadData() {
         // El proyecto principal es el que coincida con el ID de la URL con find
         const mainProject = data.find(project => project.uuid === queryId);
 
+        // Si no encuentra el proyecto, mostramos un mensaje de error
+        if (!mainProject) {
+            alert("Project not found");
+            return;
+        };
+
         // Los "Otros proyectos" son todos los demás (filtramos el que ya elegimos) con filter
         const otherProjects = data.filter(project => project.uuid !== queryId);
 

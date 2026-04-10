@@ -9,7 +9,7 @@ window.onscroll = function() {
 
 function scrollFunction() {
     // Si el usuario baja más de 400px desde el tope, aparece el botón
-    if (window.innerWidth > 767 && (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)) {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         btnBackToTop.style.display = "flex"; // Cambiamos de none a flex para mostrar el botón
     } else {
         btnBackToTop.style.display = "none";

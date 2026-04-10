@@ -25,3 +25,9 @@ window.addEventListener('click', (e) => {
     };
 });
 
+document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        hamburger.style.display = 'flex';
+    });
+});

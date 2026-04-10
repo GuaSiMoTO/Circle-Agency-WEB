@@ -39,13 +39,23 @@ img {
     max-width: 100%;
     height: auto;
 }
-
+nav, 
+.div-hero, 
+#projects, 
+#services,
+#clients,
+.footer {
+    max-width: 1350px; /* Igual que el Newsletter */
+    margin: 0 auto;    /* Centra la sección */
+    padding: 40px;     /* Padding normal para que no pegue a los bordes en móviles */
+    width: 100%;       /* Para que sea responsive */
+}
 /* Configuración básica de la barra */
 nav {
     display: flex;
     justify-content: space-between; 
     align-items: center;            
-    padding: 40px 20%;              
+                 
 }
 
 a {
@@ -88,10 +98,6 @@ a {
 
 /* Estilos de las tarjetas de projects en index.html y projects.html*/
 /* Projects Section*/
-#projects {
-    padding: 80px 20%;
-}
-
 #projects h2 {
     font-size: 2.5rem;
     color: var(--color-dark-1);
@@ -250,7 +256,6 @@ a {
     display: flex;
     justify-content: space-around; 
     align-items: flex-start;
-    max-width: 1300px; 
     margin: 50px auto;       
     padding: 80px 40px;
     width: 100%;

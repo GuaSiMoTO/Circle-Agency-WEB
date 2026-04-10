@@ -2,7 +2,6 @@
 .div-hero {
     display: flex;
     align-items: center;
-    padding: 30px 20%;
 }
 
 .hero-content {
@@ -53,9 +52,7 @@
 
 .hero-image {
     position: relative; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: absolute;
     width: 400px;
     margin: 0 auto;
 }
@@ -90,8 +87,7 @@
     display: flex;
     justify-content: space-around; 
     align-items: center;           
-    flex-wrap: wrap;               
-    padding: 60px 20%;             
+    flex-wrap: wrap;                          
     gap: 30px;                     
 }
 
@@ -117,7 +113,7 @@
     filter: grayscale(0%);
 }
 
-/* Testimonial Section (Cambiado a ID) */
+/* Testimonial Section */
 #testimonial {
     background-color: var(--color-dark-1);
     background-image: url("../images/testimonial-section/orbit.png");
@@ -202,10 +198,6 @@
 .emoji-4 { bottom: 40px; right: 40px; }
 
 /* Services Section (Cambiado a ID) */
-#services {
-    padding: 80px 20%;
-}
-
 #services h2 {
     font-size: 2.5rem;
     color: var(--color-dark-1);

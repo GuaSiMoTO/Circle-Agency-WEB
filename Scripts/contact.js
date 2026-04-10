@@ -47,13 +47,16 @@ function sendForm(event) {
         // Mostrar tu modal de éxito
         document.querySelector('.contact-modal').style.display = 'flex';
         
-        // Limpiar el formulario tras el envío
-        form.reset();
     };
+
+    const closeBtn = document.querySelector('.close-button');
+
+    closeBtn.addEventListener('click', () => {
+        document.querySelector('.contact-modal').style.display = 'none';
+        document.getElementById('successContact').hidden = true;
+        document.getElementById('contact-form').reset();
+    });
 };
 
-// Lógica para cerrar el modal al hacer clic en la X
-document.querySelector('.close-button').addEventListener('click', () => {
-    document.querySelector('.contact-modal').style.display = 'none';
-});
+
 
