@@ -30,8 +30,8 @@ html, body {
     background-color: var(--color-light-1);
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden; /* Corta cualquier cosa que sobresalga por los lados */
-    width: 100%;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 /* Imágenes. Aseguramos que se muestren correctamente */
@@ -47,11 +47,10 @@ nav {
     align-items: center;            
     padding: 40px 20%;              
 }
-.nav-menu-icon {
-  display: none; /* Oculto por defecto, se mostrará en móvil */
 
+a {
+    text-decoration: none;
 }
-
 .nav-links {
     display: flex;
     list-style: none;
@@ -61,7 +60,6 @@ nav {
 }
 
 .nav-links a {
-    text-decoration: none;
     color: var(--color-dark-2);                  
     font-weight: 700;
     font-family: sans-serif;
@@ -71,7 +69,6 @@ nav {
     background-color: var(--color-blue-1);      
     color: white;
     padding: 20px 25px;
-    text-decoration: none;
     font-weight: bold;
     border-radius: 0px;             
     transition: background 0.3s;
@@ -87,22 +84,6 @@ nav {
 
 .logo img {
     height: 30px;                   
-}
-
-/* Menú Lateral Móvil */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Totalmente fuera de la pantalla a la derecha */
-    width: 200px;  /* Ancho del menú */
-    height: 100%;
-    background-color: rgba(7, 42, 200, 0.90); /* Azul oscuro transparente */
-    z-index: 2000; /* Por encima de todo */
-    display: flex;
-    flex-direction: column;
-    padding: 80px 40px;
-    transition: right 0.5s ease-in-out; /* Animación de deslizamiento */
-    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
 }
 
 /* Estilos de las tarjetas de projects en index.html y projects.html*/
@@ -168,7 +149,6 @@ nav {
 }
 
 .project-contaier a {
-    text-decoration: none;
     color: var(--color-blue-1);
     font-weight: 600;
     margin-bottom: 25px;
@@ -187,45 +167,6 @@ nav {
 }
 .project-contaier article{
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-}
-
-
-/* Clase que activaremos con JS para mostrar el menú */
-.mobile-menu.active {
-    right: 0; /* Lo movemos al borde derecho */
-}
-
-.close-menu {
-    position: absolute;
-    top: 17px;
-    right: 25px;
-    font-size: 35px;
-    color: black;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.mobile-nav-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 50px;
-}
-
-.mobile-nav-links li {
-    margin-bottom: 30px;
-}
-
-.mobile-nav-links a {
-    color: var(--color-dark-2);
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    transition: opacity 0.3s;
-}
-
-.mobile-nav-links a:hover {
-    color: black;
-    opacity: 0.7;
 }
 
 /* Newsletter */
@@ -293,7 +234,6 @@ nav {
     transition: background 0.3s;
     display: flex;
     align-items: center;
-    text-decoration: none;
 }
 
 .newsletter-subscribe:hover {
@@ -345,7 +285,6 @@ nav {
 }
 
 .sitemap a {
-    text-decoration: none;
     color: var(--color-dark-2);
     font-size: 17px;
     transition: color 0.3s ease;

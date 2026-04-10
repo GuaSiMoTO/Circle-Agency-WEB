@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/burger.css">
+    <link rel="stylesheet" href="CSS/arrow-scroll.css">
     <link rel="stylesheet" href="CSS/responsive.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -36,7 +38,7 @@
                 <a href="contact.html" class="btn-contact">Contact Us</a>
 
                 <!-- botón de menú hamburguesa escondido -->
-                <!-- Lo crearemos con CSS y JavaScript para que solo aparezca en pantallas pequeñas -->
+                <!-- Lo crearemos con CSS. solo aparezca responsive en pantallas pequeñas -->
                 <div class="nav-menu-icon" id="hamburger-menu">
                     <span></span>
                     <span></span>
@@ -77,11 +79,11 @@
             </div>
 
             <section id="clients">
-                <a href="#"><img src="images/logos/airbnb-logo.svg" alt="Airbnb Logo"></a>
-                <a href="#"><img src="images/logos/google-logo.svg" alt="Google Logo"></a>
-                <a href="#"><img src="images/logos/microsoft-logo.svg" alt="Microsoft Logo"></a>
-                <a href="#"><img src="images/logos/fedex-logo.svg" alt="FedEx Logo"></a>
-                <a href="#"><img src="images/logos/amazon-logo.svg" alt="Amazon Logo"></a>
+                <a href="https://www.airbnb.es/"><img src="images/logos/airbnb-logo.svg" alt="Airbnb Logo"></a>
+                <a href="https://www.google.com/"><img src="images/logos/google-logo.svg" alt="Google Logo"></a>
+                <a href="https://www.microsoft.com/"><img src="images/logos/microsoft-logo.svg" alt="Microsoft Logo"></a>
+                <a href="https://www.fedex.com/"><img src="images/logos/fedex-logo.svg" alt="FedEx Logo"></a>
+                <a href="https://www.amazon.es/"><img src="images/logos/amazon-logo.svg" alt="Amazon Logo"></a>
             </section>
 
             <section id="projects">
@@ -196,7 +198,11 @@
 
             </section>
 
-            <span class="arrow-up"></span>
+            <!-- Botón para volver al inicio, inicialmente oculto, se mostrará al hacer scroll hacia abajo -->
+            <button id="btn-back-to-top" title="Ir arriba">
+                <span>↑</span>
+            </button>
+
         </main>
 
         <footer class="footer">
@@ -220,12 +226,11 @@
             </ul>
         </footer>
 
-        <!-- Botón para volver al inicio, inicialmente oculto, se mostrará al hacer scroll hacia abajo -->
-        <button id="btn-back-to-top" title="Ir arriba">
-            <span>↑</span>
-        </button>
+        
 
+        <!-- enlace al script de proyectos -->
         <script src="Scripts/index.js"></script>
+        <script src="Scripts/arrow-scroll.js"></script>
     
     </body>
 </html>

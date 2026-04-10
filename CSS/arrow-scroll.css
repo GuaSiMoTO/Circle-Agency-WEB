@@ -1,0 +1,76 @@
+/* ARROW Botón volver al inicio */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: 0;
+    
+    /* Degradado de fondo original */
+    background-image: linear-gradient(
+        200deg,
+        #9500ff,
+        #09f,
+        #00DDFF
+    );
+    border-radius: 50%;
+    
+    /* Dimensiones fijas para círculo perfecto */
+    width: 60px;
+    height: 60px;
+    
+    /* Centrado del contenido */
+    display: none;  /* Oculto por defecto, se mostrará con JS */
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+    transition: .3s;
+    overflow: hidden; /* Importante para el efecto hover */
+}
+
+/* El span ahora lo usamos solo para centrar la flecha CSS */
+#btn-back-to-top span {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+/* DIBUJAMOS LA FLECHA CSS, porque en html no se puede dar el grosor a la flecha*/
+/* La línea vertical de la flecha */
+#btn-back-to-top span::before {
+    content: '';
+    position: absolute;
+    width: 6px;          
+    height: 16px;         
+    background-color: #fff; 
+    border-radius: 3px;
+    top: 31px;            
+}
+
+/* La punta de la flecha (Triángulo chato) */
+#btn-back-to-top span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;  /* Aumentado ligeramente para anchura visual */
+    border-right: 14px solid transparent; /* Aumentado ligeramente para anchura visual */
+    border-bottom: 18px solid #fff;        /* Altura de la punta ligeramente aumentada */
+    top: 15px;            /* Posición vertical de la punta subida ligeramente */
+}
+
+/* --- EFECTOS HOVER Y ACTIVE --- */
+
+/* Mantenemos tu efecto hover elegante con transparencia */
+#btn-back-to-top:hover span {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#btn-back-to-top:active {
+    transform: scale(0.9);
+}

@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/projects.css">
+    <link rel="stylesheet" href="CSS/burger.css">
+    <link rel="stylesheet" href="CSS/arrow-scroll.css">
     <link rel="stylesheet" href="CSS/responsive.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -48,7 +50,7 @@
         </nav>
     </header>
 
-    <head>
+    <main>
         <!-- Menu desplegable para móviles, inicialmente oculto, se mostrará al hacer clic en el ícono de menú hamburguesa -->
         <div class="mobile-menu" id="mobile-menu">
 
@@ -120,7 +122,13 @@
                 <a href="contact.html" class="boton-estilo">Subscribe</a>
             </form>
         </section>
-    </head>
+
+        <!-- Botón para volver al inicio, inicialmente oculto, se mostrará al hacer scroll hacia abajo -->
+        <button id="btn-back-to-top" title="Ir arriba">
+            <span>↑</span>
+        </button>
+
+    </main>
         
     <footer class="footer">
         <div class="address-info">
@@ -142,6 +150,7 @@
     <!-- enlace al script de proyectos -->
     <script src="Scripts/projects.js"></script>
     <script src="Scripts/index.js"></script>
+    <script src="Scripts/arrow-scroll.js"></script>
 
 </body>
 

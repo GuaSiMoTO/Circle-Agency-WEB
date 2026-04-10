@@ -1,10 +1,13 @@
 /* RESPONSIVE */
 
-@media (max-width: 1406px) {
-    #projects, #services, #clients {
-        padding: 50px; /* Reducimos el padding a 50px */
-    }
 
+
+@media (max-width: 986px) {
+    
+    nav, .div-hero, #projects, #services, #clients {
+        padding: 20px; /* Reducimos el padding de 20% a algo fijo para móvil */
+    }
+    
     /* atacamos antes la section hero para que se vea mejor*/
    /* section hero */
     .div-hero {
@@ -37,48 +40,6 @@
         display: none; /* La solución más limpia para móviles: ocultar las tarjetas */
     }
 
-
-    /* section projects */
-    /* Forzamos a que el contenedor use exactamente 2 columnas */
-    .project-contaier {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px; /* espacio entre las tarjetas */
-       
-    }
-
-    /* Si el último elemento es impar, lo centramos ocupando las dos columnas */
-    .project-contaier article:last-child:nth-child(odd) {
-        grid-column: 1 / span 2; /* Ocupa el ancho de las dos columnas */
-        justify-self: center;    /* Se centra horizontalmente */
-        width: 45%;              /* Ajusta este ancho para que coincida con las de arriba */
-    }
-    
-    /* section services */
-
-    /* Usamos el ID #services para que el navegador sepa a qué sección aplicar el grid de 2 columnas */
-    #services .project-contaier {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    /* Centramos la última tarjeta de servicios si es impar */
-    #services .project-contaier article:last-child:nth-child(odd) {
-        grid-column: 1 / span 2;
-        justify-self: center;
-        width: 45%;
-    }
-
-
-
-}
-
-@media (max-width: 986px) {
-    
-    nav, .div-hero, #projects, #services, #clients {
-        padding: 20px; /* Reducimos el padding de 20% a algo fijo para móvil */
-    }
 
     /* NAVEGACIÓN */
     .nav-links, .btn-contact {

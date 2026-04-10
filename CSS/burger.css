@@ -1,0 +1,60 @@
+/* Esto oculta el icono y lo saca del flujo del flexbox */
+.nav-menu-icon {
+    display: none;
+}
+
+/* Menú Lateral Móvil */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Totalmente fuera de la pantalla a la derecha */
+    width: 200px;  /* Ancho del menú */
+    height: 100%;
+    background-color: rgba(7, 42, 200, 0.90); /* Azul oscuro transparente */
+    z-index: 2000; /* Por encima de todo */
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px;
+    transition: right 0.5s ease-in-out; /* Animación de deslizamiento  */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
+
+
+/* Clase que activaremos con JS para mostrar el menú */
+/* menu nav de la hamburguesa */
+.mobile-menu.active {
+    right: 0; /* Lo movemos al borde derecho */
+}
+
+/* X de cerrar el menu*/
+.close-menu {
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    font-size: 35px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 30px;
+}
+
+.mobile-nav-links a {
+    color: var(--color-dark-2);
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.mobile-nav-links a:hover {
+    color: black;
+    opacity: 0.7;
+}

@@ -37,7 +37,7 @@ function sendForm(event) {
         };
     };
 
-    // 4. Si todo es válido, procedemos
+    // Si todo es válido, procedemos
     if (isValid) {
         console.log("¡Formulario listo para enviar!", data);
         
