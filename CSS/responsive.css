@@ -14,7 +14,7 @@
     margin: 0;
     flex-direction: column; /* Apila los elementos */
     text-align: left;     /* Centra el texto para que luzca mejor en móvil */
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     }
 
     .hero-content {
@@ -133,10 +133,10 @@
 @media (max-width: 767px){
     /* ajustamos ancho de la iamgen principal de hero*/
     .hero-image img[alt="Hero Image"] {
-        width: 70%;      
+        width: 90%;      
         height: auto;
         display: block;   /* Necesario para que el margin auto funcione */
-        margin: 0 auto;   /* La centra horizontalmente */
+        margin: 20px auto;   /* La centra horizontalmente */
     }
 
     .hero-image {
