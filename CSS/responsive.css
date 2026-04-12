@@ -14,13 +14,12 @@
     margin: 0;
     flex-direction: column; /* Apila los elementos */
     text-align: left;     /* Centra el texto para que luzca mejor en móvil */
-    padding: 40px 20px;     /* Reducimos el padding lateral */
     padding-bottom: 100px;
     }
 
     .hero-content {
-        max-width: 100%;
-        margin-bottom: 10px;    /* Espacio antes de la imagen */
+        width: 100%; /* El contenido ocupa todo el ancho disponible */
+          /* Espacio antes de la imagen */
     }
 
     .hero-content h1 {
@@ -31,15 +30,24 @@
         font-size: 1.5rem;      /* Ajustamos el tamaño del subtítulo */
     }
 
-    .hero-image img[alt="Hero Image"] {
-        width: 1000px;
-    }
 
     .hero-image img[alt="Hero Image 2"], 
     .hero-image img[alt="Hero Image 3"] {
         display: none; /* La solución más limpia para móviles: ocultar las tarjetas */
     }
 
+    .hero-image {
+        width: 100%;       /* Hacemos que el contenedor sea flexible desde ya */
+        max-width: 500px;  /* para que no se haga GIGANTE en tablets */
+        margin: 0 auto;
+    }
+
+    .hero-image img[alt="Hero Image"] {
+        width: 100%;       /* La imagen se adapta al contenedor */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
 
     /* NAVEGACIÓN */
     .nav-links, .btn-contact {
@@ -123,6 +131,18 @@
 }
 
 @media (max-width: 767px){
+    /* ajustamos ancho de la iamgen principal de hero*/
+    .hero-image img[alt="Hero Image"] {
+        width: 70%;      
+        height: auto;
+        display: block;   /* Necesario para que el margin auto funcione */
+        margin: 0 auto;   /* La centra horizontalmente */
+    }
+
+    .hero-image {
+        width: 100%; /* Permite que el contenedor se adapte al ancho del móvil */
+    }   
+    
 
     /* Forzamos una sola columna para Proyectos y Servicios */
     .project-contaier, 
