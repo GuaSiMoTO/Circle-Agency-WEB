@@ -1,4 +1,8 @@
-# Circle Agency Web
+
+
+<img src="images/logos/circle.svg" width="200"> 
+
+## Agency Web
 
 Responsive multi-page website built with HTML, CSS and JavaScript, based on a Figma design.  
 Includes dynamic content, interactivity, and deployment using Netlify.
@@ -6,7 +10,7 @@ Includes dynamic content, interactivity, and deployment using Netlify.
 - Figma design: https://www.figma.com/design/hJWUISjsXRdZ8fG453x6L9
 - Live WEB Site: https://project1-circleweb.netlify.app/
 
----
+
 
 ## Project Overview
 
@@ -19,8 +23,6 @@ Pages included:
 - Contact (form with validation)
 
 
----
-
 ## Technologies
 
 - Visual Studio Code
@@ -31,7 +33,6 @@ Pages included:
 - Netlify
 - Gemini IA / ChatGPT / Claude
 
----
 
 ## Features
 
@@ -42,35 +43,34 @@ Pages included:
 - Mobile hamburger menu
 - Scroll-to-top button
 
----
 
 ## Project Structure
 ```js
 CIRCLE-AGENCY-WEB/
 │
 ├── CSS/
-│ ├── style.css
+│ ├── arrow-scroll.css
+│ ├── burger.css
+│ ├── contact.css
 │ ├── index.css
 │ ├── projects.css
-│ ├── contact.css
-│ ├── burger.css
-│ ├── arrow-scroll.css
 │ ├── responsive.css
+│ ├── style.css
 │
-├── Scripts/
-│ ├── index.js
-│ ├── projects.js
-│ ├── contact.js
-│ ├── arrow-scroll.js
+├── HTML/
+│ ├── contact.html
+│ ├── projects.html
 │
 ├── images/
+├── Scripts/
+│ ├── arrow-scroll.js
+│ ├── contact.js
+│ ├── index.js
+│ ├── projects.js            
+│
 ├── index.html
-├── projects.html
-├── contact.html
 └── README.md
 ```
-
----
 
 ## JavaScript Overview
 
@@ -127,8 +127,6 @@ function renderOtherProjects(others) {
 ```
 
 
----
-
 ## Form Validation
 
 - Uses `FormData` to collect inputs
@@ -136,21 +134,43 @@ function renderOtherProjects(others) {
 - Adds visual feedback with CSS classes
 - Displays success modal
 
----
 
 ## Key UI Components
 
 ### Scroll-to-top button
 
 - Built with pure CSS
+
+```CSS
+/* DRAWING THE CSS ARROW, because you can't set the arrow thickness in HTML */
+/* The vertical line of the arrow */
+#btn-back-to-top span::before {
+    content: '';
+    position: absolute;
+    width: 6px;          
+    height: 16px;         
+    background-color: #fff; 
+    border-radius: 3px;
+    top: 31px;            
+}
+
+/* The arrow tip (Flat triangle) */
+#btn-back-to-top span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;  /* increased for width */
+    border-right: 14px solid transparent;
+    border-bottom: 18px solid #fff;     /* increased tip height */
+    top: 15px;            /* Vertical position of the tip slightly raised */
+}
+```
 - Appears after scrolling
 - Smooth scroll behavior
-
 <p align="center">
   <img src="images/images-readme/image-1.png" width="200">
 </p>
-
----
 
 ### Mobile menu
 
@@ -161,8 +181,6 @@ function renderOtherProjects(others) {
 <p align="center">
   <img src="images/images-readme/image-2.png" width="500">
 </p>
-
----
 
 ### Contact form + modal
 
@@ -175,7 +193,6 @@ function renderOtherProjects(others) {
   <img src="images/images-readme/image-3.png" width="500">
 </p>
 
----
 
 ### Hero section
 
@@ -209,7 +226,3 @@ function renderOtherProjects(others) {
 ## Author
 
 Javier Barroso Romero
-
-## License
-
-Educational project

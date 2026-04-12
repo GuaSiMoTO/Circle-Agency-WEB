@@ -11,7 +11,7 @@
     /* atacamos antes la section hero para que se vea mejor*/
    /* section hero */
     .div-hero {
-    margin: 0px 20px;
+    margin: 0;
     flex-direction: column; /* Apila los elementos */
     text-align: left;     /* Centra el texto para que luzca mejor en móvil */
     padding: 40px 20px;     /* Reducimos el padding lateral */
@@ -151,12 +151,11 @@
     }
 
     .testimonial-text h3 {
-        font-size: 1.8rem;       /* Reducimos un poco el tamaño de la cita */
+        font-size: 1.7rem;       /* Reducimos un poco el tamaño de la cita */
     }
 
     .testimonial-quote p{
-        font-size: 1.5rem;      /* Reducimos el tamaño del texto de la cita */
-        width: 580px;
+        font-size: 1.3rem;      /* Reducimos el tamaño del texto de la cita */
     }
 
     .testimonial-quote,

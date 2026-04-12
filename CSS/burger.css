@@ -8,7 +8,7 @@
     position: fixed;
     top: 0;
     right: -100%; /* Totalmente fuera de la pantalla a la derecha */
-    width: 200px;  /* Ancho del menú */
+    width: 220px;  /* Ancho del menú */
     height: 100%;
     background-color: rgba(7, 42, 200, 0.90); /* Azul oscuro transparente */
     z-index: 2000; /* Por encima de todo */
@@ -40,7 +40,8 @@
 .mobile-nav-links {
     list-style: none;
     padding: 0;
-    margin-top: 50px;
+    margin-top: 20
+    px;
 }
 
 .mobile-nav-links li {
